@@ -4,14 +4,12 @@
 
 For school, most of the coding projects are hosted on the school's Github account. As a student, we have to clone that repo, work from it, submit from it, and pull new changes from it. However, where do we push our changes? How do we keep track of our work, separate from the public repo that all of the other students are using? A very simple way to do this, is to create an empty private repo and add it as a remote.
 
-0. Create an empty private repo on Github
-
-1. Clone the public repo on your local machine
+First, create an empty private repo on Github. Next, clone the public repo on your local machine:
 ```
 $ git clone <public repo addr>
 ```
 
-2. Add the empty private repo as a remote
+Finally, add the empty private repo as a remote:
 ```
 $ cd <public repo name>
 $ git remote add <private remote name> <private repo addr>
@@ -43,7 +41,7 @@ You can add branches to the private repo and manage all of them just like you wo
 3. Push an initial commit to the private repo's master branch, which serves as a starting point
 4. Create a working branch off the private master branch
 5. Do all of my work on the private working branch
-6. Whenever new changes are made on the public branch, pull and merge them into the private master branch, and then do the same from the private master branch into the private working branch
+6. Whenever new changes are made on the public branch, pull and merge them into the private working branch (you can also keep the private master branch updated as well - this is a little extra work that hasn't yet been necessary for me)
 
 Here's an example `.git/config`:
 
