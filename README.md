@@ -34,3 +34,14 @@ $ git fetch --all
 $ git pull
 $ git submodule update --init --recursive
 ```
+
+#### Extra thoughts
+
+You can add branches to the private repo and manage all of them just like you would in any other case. Typically for these school projects I use the following process:
+1. Clone the public repo
+2. Create a private repo and setup the private remote
+3. Push an initial commit to the private repo's master branch
+  a. This initial commit serves as a starting point
+4. Create a working branch off the private master branch
+5. Do all of my work on the private working branch
+6. Whenever new changes are made on the public branch, pull and merge them into the private master branch, and then do the same from the private master branch into the private working branch
