@@ -35,7 +35,7 @@ $ git submodule update --init --recursive  # if the public repo has submodules
 
 ## Using a "master" private repo to manage more than one public repo
 
-As mentioned earlier, things might not work out as nicely if you have to clone multiple repos, like if each project in the course is in its own repo. No need to worry, there's a solution to this, and you don't have to use any complicated features of git, like submodules.
+As mentioned earlier, things might not work out as nicely if you have to clone multiple repos, like if each project in the course is in its own repo. No need to worry, there's a solution to this, and you don't have to use any complicated features of git, like submodules. _Remember the purpose of this is to have a "master" private repo that doesn't care that its subdirectories are also git repos. All it does is track changes inside itself - it doesn't need to track the git histories of its subdirectories._
 
 First, create a private repo, and add a README.md. _(You don't have to create a README.md, but why not? You can add some comments in there that help you remember what you're doing.)_
 
