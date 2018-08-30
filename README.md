@@ -100,3 +100,28 @@ Now just commit the changes, and push them to the private repo, F@#K YEA!
 $ git commit
 $ git push origin <branch>
 ```
+
+## Troubleshooting
+
+The instructions above have been verified with git version 2.18.0. If you don't have this version, your commands may have to change a bit. Also, for the "master" private repos, I typically only push to master, because I'm almost always exclusively pushing to the repo, and not pulling.
+
+Here's a few things to try if you're having issues (this list will grow overtime).
+
+### Check your version of git
+```
+$ git --version
+```
+
+### Check which refs you have
+```
+$ git show-ref
+```
+
+### Push with a specific ref
+```
+$ git push origin HEAD:<branch name>
+
+OR
+
+$ git push origin HEAD:refs/heads/<branch name>
+```
