@@ -108,10 +108,11 @@ First, create an empty private repo on Github. Next, clone the public repo on yo
 ```
 $ git clone <public repo addr> <public repo name>
 ```
-Finally, add the empty private repo as a remote:
+Finally, add the empty private repo as a remote, and for safety, set the origin push remote to an invalid url (so you can't accidentally push to the origin):
 ```
 $ cd <public repo name>
 $ git remote add <private remote name> <private repo addr>
+$ git remote set-url --push origin <some invalid arr - could just be word>
 ```
 That's it. Now for some management stuff.
 
