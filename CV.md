@@ -48,3 +48,5 @@ That's it. Now you can open a Python file, like ps0.py, and run/debug it as you 
 ## Step 3: Create a Python debug configuration for each project
 
 First, I think you have to create a new Project Interpreter for each project, and just select a different service from the same docker-compose.yml file (there might be a better way to do this - I don't know).
+
+...TODO...
