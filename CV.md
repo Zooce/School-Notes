@@ -44,3 +44,7 @@ services:
 First, open the settings window. I'm on a Mac so the settings are at PyCharm > Preferences..., then open the Project: <name> drop-down menu and select Project Interpreter. There will be an icon near the top right of the screen that looks like your typical "settings" icon (a gear), click that and select "Add...." On the left side of the new window that pops up, select Docker Compose. There are three things you have to fill out, Server, Configuration file(s), and Service. The other two (Environment variables, and Python interpreter path) can be left alone. For Server, select New..., give it a name, and select Docker for Mac, and click OK. For Configuration files, click the folder icon on the right side of that field, and browe to the docker-compose.yml file. Finally, select a service that you defined in the docker-compose.yml file.
 
 That's it. Now you can open a Python file, like ps0.py, and run/debug it as you normally would.
+
+## Step 3: Create a Python debug configuration for each project
+
+First, I think you have to create a new Project Interpreter for each project, and just select a different service from the same docker-compose.yml file (there might be a better way to do this - I don't know).
