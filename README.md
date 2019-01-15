@@ -2,7 +2,7 @@
 
 ## Cloning a public class repo, but pushing to a private one
 
-If the class repo is organized such that there is a single class repo with all of the projects inside (the way it should be), then there's a very simple way to manaage this. Essentially, you create an empty private repo and add it as a remote to the cloned class repo.
+If the class repo is organized such that there is a single class repo with all of the projects inside (the way it should be), then there's a very simple way to manage this. Essentially, you create an empty private repo and add it as a remote to the cloned class repo.
 
 First, create an empty private repo on Github. Next, clone the _public_ repo on your local machine.
 ```
@@ -12,7 +12,7 @@ $ git submodule update --init --recursive  # if the public class repo has submod
 Finally, add the empty private repo as a remote, and for safety, set the origin push remote to an invalid url (so you can't accidentally push to the origin):
 ```
 $ cd <public repo name>
-$ git remote set-url --push origin <some invalid arr - could just be word>
+$ git remote set-url --push origin <some invalid url - could just be word>
 $ git remote add <private remote name> <private repo addr>
 ```
 That's it. Now for some management stuff.
@@ -34,9 +34,9 @@ $ git submodule update --init --recursive  # if the public class repo has submod
 ```
 ## Handling separate projects as submodules (only if necessary)
 
-In the really crappy case that the course admin decide to use separate repositories for each project, you have one clean way to do this, submodules. Using submodules isn't really that bad - it's just multiple git repos inside another one. But it can be hard to get used to ad first. The biggest downside is that, using the method above - pushing to a private remote - means you have to set up a new private git repo for _EVERY_ project...balls... Whatever, it is what it is.
+In the really crappy case that the course admin decide to use separate repositories for each project, you have one clean way to do this, submodules. Using submodules isn't really that bad - it's just multiple git repos inside another one. But it can be hard to get used to at first. The biggest downside is that, using the method above - pushing to a private remote - means you have to set up a new private git repo for _EVERY_ project...balls... Whatever, it is what it is.
 
-You could just keep each project separate - which is totally fine, but personally I like to have keep them together under a common repo and even use that common repo to put extra stuff like helpful tools that I write during the course, or notes, or whatever. This way I can keep track of everything in git, and when the class is over I can remove the files from my computer to create space but still have everything up in GitHub.
+You could just keep each project separate - which is totally fine, but personally I like to keep them together under a common repo and even use that common repo to put extra stuff like helpful tools that I write during the course, or notes, or whatever. This way I can keep track of everything in git, and when the class is over I can remove the files from my computer to create space but still have everything up in GitHub.
 
 ### Private master repo
 
