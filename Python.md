@@ -1,5 +1,39 @@
 # Python Stuff
 
+## Working Anaconda
+
+Anaconda is similar to `virtualenv` and `virtualenvwrapper` in that it allows you to create "pseudo" virtual environments for Python. You can download Anaconda from the [Anaconda download page](https://github.com/Zooce/OMSCS-AI-CS6601-assignment1.git). Once downloaded you can create environments like this (straight from the [documentation](https://conda.io/docs/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands)):
+
+```bash
+$ conda create --name myenv
+```
+
+You can install whatever libraries you want as well with:
+
+```bash
+$ conda install --name myenv scipy=0.15.0
+```
+
+Better yet, you can create an `environments.yaml` file that defines all the libraries and packages you want installed in your environment.
+
+`environment.yaml`
+```yaml
+name: myenv
+channels:
+  - anaconda
+  - defaults
+dependencies:
+  - python=3.7.*
+  - numpy=1.15.4
+  - scipy=1.2.0
+  - matplotlib=3.0.2
+  - networkx=2.2
+  - pgmpy=0.1.6
+  - nelson=0.4.3
+```
+
+!!! WIP !!! <<<
+
 ## Working with `virtualenv and virtualenvwrapper`
 
 `virtualevn` is a Python virtual environment manager. With this tool you can create pseudo virtual environments. These aren't real virtual environments, like the ones you run in VirtualBox, but instead they simply map a set of Python dependencies to a certain directory, and make sure that your Python environment uses the dependencies in that directory while the pseudo virtual environments is active.
