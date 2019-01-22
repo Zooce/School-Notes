@@ -57,3 +57,19 @@ Now follow the steps above to setup the private remotes.
 ### Managing submodules
 
 The only thing extra thing you have to do in terms of management is an extra commit and push in the master repo. For example, let's say you're finished with project 1. You've commited your changes in the project 1 submodule, and you've pushed them up to your private remote for project 1. At this point it might be a good idea to update the private master repo as well, so change directory up into the master repo, commit the changes (you'll see that the project 1 submodule has modifications), and push to the private master repo.
+
+## Changing passwords
+
+If you have to change your password in the middle of a semester, you'll have to update your git credentials if you want to clone or pull from the class repos. To do this, first run the following command (credit to [this post](https://stackoverflow.com/a/20195558/2600813)):
+
+```bash
+# for macOS
+git config --global credential.helper osxkeychain
+
+# for Windows
+git config --global credential.helper wincred
+
+# for Linux (not sure)...
+```
+
+After this, the next git command you run that requires your password for the class repo, will prompt for your username and password. All done.
