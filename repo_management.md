@@ -34,6 +34,19 @@ $ git submodule update --init --recursive  # if the public class repo has submod
 ```
 ## Handling separate projects as submodules (only if necessary)
 
+#### TL;DR (assuming private master repo and private assginment repo are created)
+```
+$ cd ~/Developer/OMSCS/<class>
+$ git submodule add <addr> <assignment name>
+$ git commit -m "add <assignment name> submodule"
+$ git push origin master
+$ cd <assignment name>
+$ git submodule update --init --recursive
+# track git lfs files if necessary and commit
+$ git remote set-url --push origin notaurl
+$ git push private master
+```
+
 In the really crappy case that the course admin decide to use separate repositories for each project, you have one clean way to do this, submodules. Using submodules isn't really that bad - it's just multiple git repos inside another one. But it can be hard to get used to at first. The biggest downside is that, using the method above - pushing to a private remote - means you have to set up a new private git repo for _EVERY_ project...balls... Whatever, it is what it is.
 
 You could just keep each project separate - which is totally fine, but personally I like to keep them together under a common repo and even use that common repo to put extra stuff like helpful tools that I write during the course, or notes, or whatever. This way I can keep track of everything in git, and when the class is over I can remove the files from my computer to create space but still have everything up in GitHub.
