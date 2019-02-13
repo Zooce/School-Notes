@@ -1,8 +1,8 @@
 # Python Stuff
 
-## Working Anaconda
+## Working Anaconda (preferably Miniconda) 
 
-Anaconda is similar to `virtualenv` and `virtualenvwrapper` in that it allows you to create "pseudo" virtual environments for Python. You can download Anaconda from the [Anaconda download page](https://github.com/Zooce/OMSCS-AI-CS6601-assignment1.git). Once downloaded you can create environments like this (straight from the [documentation](https://conda.io/docs/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands)):
+Anaconda is similar to `virtualenv` and `virtualenvwrapper` in that it allows you to create "pseudo" virtual environments for Python. You can download Anaconda from the [Anaconda distribution repository](https://repo.continuum.io/) or the [Anaconda download page](https://www.anaconda.com/distribution/). Once downloaded you can create environments like this (straight from the [documentation](https://conda.io/docs/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands)):
 
 ```bash
 $ conda create --name myenv
@@ -11,7 +11,7 @@ $ conda create --name myenv
 You can install whatever libraries you want as well with:
 
 ```bash
-$ conda install --name myenv scipy=0.15.0
+$ conda install --name myenv python=3.7 scipy=0.15.0
 ```
 
 Better yet, you can create an `environments.yaml` file that defines all the libraries and packages you want installed in your environment.
