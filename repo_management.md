@@ -44,6 +44,7 @@ $ cd <assignment name>
 $ git submodule update --init --recursive
 # track git lfs files if necessary and commit
 $ git remote set-url --push origin notaurl
+$ git remote add <private remote name> <private repo addr>
 $ git push private master
 ```
 
